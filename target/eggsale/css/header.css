@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+header {
+    background-color: #FBFBFD;
+    height:60px;
+    border-bottom:1px solid #c0c0c0;
+}
+
+header menu {
+    margin-top:0px;
+    vertical-align:top;
+    display:inline-block;
+    height:100%;
+    width: 60%;
+}
+
+header .menuitem {
+    display:inline-block;
+    vertical-align:top;
+    padding:0px;
+    margin:0px;
+    width:12%;
+    height:100%;
+}
+
+header .menuitem a {
+    height:40px;
+    padding-top:20px;
+    display:inline-block;
+    color:inherit;
+    text-decoration:none;
+    font-weight:500;
+    border-right:1px solid #e0e0e0;
+    width:100%;
+    text-align:center;
+    color:#3ad;
+}
+
+header .menuitem a.selected{
+    border:1px solid #c0c0c0;
+    border-top:none;
+    border-bottom:1px solid white;
+}
+
+header .menuitem:last-child {
+    width: 250px;
+}
+
+header .menuitem:last-child a {
+    border-right:none;
+    width: 20px;
+}
+
+header .menuitem a:hover {
+    color:#5cf;
+}
+
+.menuitem input[type=submit] {
+    width: 0px;
+    display:none;
+}
+
+.menuitem input[type=text] {
+	width:50%;
+    margin-top:7%;
+    border-radius:10px 10px 10px 10px;
+    background-image:url('search.png');
+    background-repeat:no-repeat;
+    background-position:5px 0px;
+    margin-left:5px;
+    padding:2px 0px 2px 25px;
+}
+
+#logo {
+    margin-top:10px;
+    display:inline-block;
+    width:10%;
+    margin-left:20%;
+    background-image:url('eggsale.png');
+    background-size:contain;
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:40px;
+}
+
+#logo a {
+    display:block;
+    width:100%;
+    height:100%;
+    color: white; /* hack pour cacher car s:link affiche un contenu par défaut */
+}

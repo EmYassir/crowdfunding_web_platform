@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+@font-face {
+    font-family:'Source';
+    src: url('source_sans_pro/SourceSansPro-Light.otf');
+    font-weight:200;
+}
+
+@font-face {
+    font-family:'Source';
+    src: url('source_sans_pro/SourceSansPro-Regular.otf');
+    font-weight:normal;
+}
+
+@font-face {
+    font-family:'Source';
+    src: url('source_sans_pro/SourceSansPro-Semibold.otf');
+    font-weight:500;
+}
+
+@font-face {
+    font-family:'Source';
+    src: url('source_sans_pro/SourceSansPro-Bold.otf');
+    font-weight:bold;
+}

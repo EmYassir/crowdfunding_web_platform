@@ -1,0 +1,53 @@
+<header>
+	    <div id="logo">
+		<!-- index.html -->
+		<s:link beanclass="${beanPackage}.HomeActionBean" title="Home">&nbsp;</s:link>
+	    </div>
+	    <menu>
+		<div class="menuitem">
+		    <s:link beanclass="${beanPackage}.project.ListActionBean">Projects</s:link>
+		</div>
+		
+	    <c:choose>
+		<%-- If the user is not logged in, we display the "login" and "register" links --%>
+		<c:when test="${empty actionBean.currentUser}">
+		<div class="menuitem">
+		    <s:link beanclass="${beanPackage}.user.CreateActionBean">Register</s:link>
+		</div>
+		<!-- login.html -->
+		<div class="menuitem">
+		    <s:link beanclass="${beanPackage}.user.LoginActionBean">Login</s:link>
+		</div>
+		</c:when>
+		
+		<%-- If the user is logged in, we display the "profile" and "Logout" links --%>
+		<c:otherwise>
+		<!-- profile.html -->
+		<div class="menuitem">
+		    <s:link beanclass="${beanPackage}.user.ShowActionBean">
+			Profile
+			<s:param name="userId" value="${actionBean.currentUser.id}"/>
+		    </s:link>
+		</div>
+		</c:otherwise>
+	    </c:choose>		  
+		<c:if test="${not empty actionBean.currentUser}">
+		<div class="menuitem">
+			<s:link beanclass="${beanPackage}.cart.ShowActionBean">Cart</s:link>
+		</div>
+		</c:if>
+	    <c:choose>		  
+		<c:when test="${not empty actionBean.currentUser}">
+		<div class="menuitem">
+		    <s:link beanclass="${beanPackage}.user.LogoutActionBean">Logout</s:link>
+		</div>
+		</c:when>
+		</c:choose>
+		<div class="menuitem" id="search">
+		<s:form beanclass="${beanPackage}.project.ListActionBean">
+		    <s:text id="menuSearchQuery" name="searchQuery" />
+		    <s:submit name="list" value="Ok" />
+		</s:form>
+		</div>
+	    </menu>
+	</header>

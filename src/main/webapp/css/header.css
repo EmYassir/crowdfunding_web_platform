@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+
+header {
+    background-color: #FBFBFD;
+    height:60px;
+    border-bottom:1px solid #c0c0c0;
+}
+
+header form {
+    width: 100%;
+}
+
+header menu {
+    margin-top:0px;
+    vertical-align:top;
+    display:inline-block;
+    height:100%;
+    width: 60%;
+}
+
+header .menuitem {
+    display:inline-block;
+    vertical-align:top;
+    padding:0px;
+    margin:0px;
+    width:12%;
+    height:100%;
+}
+
+header .menuitem a {
+    height:40px;
+    padding-top:20px;
+    display:inline-block;
+    color:inherit;
+    text-decoration:none;
+    font-weight:800;
+    border-right:1px solid #e0e0e0;
+    width:100%;
+    text-align:center;
+    color:#0060ff;
+}
+
+header .menuitem a.selected{
+    border:1px solid #c0c0c0;
+    border-top:none;
+    border-bottom:1px solid white;
+}
+
+header .menuitem:last-child {
+    width: 250px;
+}
+
+header .menuitem:last-child a {
+    border-right:none;
+    width: 20px;
+}
+
+header .menuitem a:hover {
+    color:#004583;
+}
+
+.menuitem input[type=submit] {
+    width: 0px;
+    display:none;
+}
+
+#search {
+
+}
+
+#search input[type="text"] {
+	margin: 15px 0 0 10px;
+    background: url(search-dark.png) no-repeat 10px 6px #fcfcfc;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    height: 15px;
+    color: #555;
+    width: 150px;
+    padding: 6px 15px 6px 32px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#search input[type="text"]:focus {
+    width: 200px;
+    }
+
+
+#logo {
+    margin-top:10px;
+    display:inline-block;
+    width:172px;
+    margin-left:20%;
+    background-image:url('eggsale.png');
+    background-size:contain;
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:41px;
+    
+}
+
+#logo a {
+    text-decoration:none;
+    display:block;
+    width:100%;
+    height:100%;
+    color: white; /* hack pour cacher car s:link affiche un contenu par défaut */
+}
